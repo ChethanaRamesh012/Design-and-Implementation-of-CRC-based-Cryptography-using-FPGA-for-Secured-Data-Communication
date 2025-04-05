@@ -1,0 +1,20 @@
+module S_Inv_Shift_Rows(S_Box_out,Inv_Shift_Rows);
+  input [127:0]S_Box_out;
+  output [127:0]Inv_Shift_Rows;
+  assign Inv_Shift_Rows[127:120] = S_Box_out[127:120];
+  assign Inv_Shift_Rows[119:112] = S_Box_out[23:16];
+  assign Inv_Shift_Rows[111:104] = S_Box_out[47:40];
+  assign Inv_Shift_Rows[103:96]  = S_Box_out[71:64];
+  assign Inv_Shift_Rows[95:88]   = S_Box_out[95:88];
+  assign Inv_Shift_Rows[87:80]   = S_Box_out[119:112];
+  assign Inv_Shift_Rows[79:72]   = S_Box_out[15:8];
+  assign Inv_Shift_Rows[71:64]   = S_Box_out[39:32];
+  assign Inv_Shift_Rows[63:56]   = S_Box_out[63:56];
+  assign Inv_Shift_Rows[55:48]   = S_Box_out[87:80];
+  assign Inv_Shift_Rows[47:40]   = S_Box_out[111:104];
+  assign Inv_Shift_Rows[39:32]   = S_Box_out[7:0];
+  assign Inv_Shift_Rows[31:24]   = S_Box_out[31:24];
+  assign Inv_Shift_Rows[23:16]   = S_Box_out[55:48];
+  assign Inv_Shift_Rows[15:8]    = S_Box_out[79:72];
+  assign Inv_Shift_Rows[7:0]     = S_Box_out[103:96];
+endmodule
